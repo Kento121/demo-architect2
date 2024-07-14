@@ -1,0 +1,369 @@
+// ブレイクポイント
+$tab: 960px;
+@mixin tab {
+    @media screen and (max-width: $tab) {
+        @content;
+    }
+}
+$sp: 600px;
+@mixin sp {
+    @media screen and (max-width: $sp) {
+        @content;
+    }
+}
+
+
+
+// 共通
+html {
+  font-size: 62.5%;
+ }
+body{
+  border: 1px solid #000000;
+}
+
+.comp{
+  &_ttl{
+    position:relative;
+    margin-top: 2rem;
+    margin-left:10% ;
+    font-family: "dnp-shuei-nshogomincho-std", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 5.2rem;
+  }
+  &_content{
+    position: relative;
+    left: 12%;
+    width: 35%;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+  &_sentence{
+    display: flex;
+    &-content{
+      align-items: center;
+      width: 65%;
+      display: flex;
+      margin-left: 2%;
+      margin-right: 10%;
+      font-size: 1.6rem;
+      letter-spacing: 0.2rem;
+      font-weight: 300;
+      font-family: "Noto Sans JP", sans-serif;
+    }
+    &-ttl{
+      position: relative;
+      margin-left: 10%;
+      font-family: "dnp-shuei-nshogomincho-std", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 5.2rem;
+      white-space: nowrap;
+    }
+    &-more{
+      font-size: 3.2rem;
+      font-family: "dnp-shuei-nshogomincho-std", sans-serif;
+      position: relative;
+      padding-right: 4rem;
+      text-align: right;
+      margin-right: 9%;
+  
+      &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        display: block;
+        width: 3rem; 
+        height: 0.2rem; 
+        background: #000000;
+        font-family: "Noto Sans JP", sans-serif;
+      }
+      &::before{
+        content: "\003E";
+        position: absolute;
+        top: 47%;
+        right: -0.3rem;
+        transform: translateY(-50%);
+        font-size: 2.8rem;
+        font-weight: 300;
+        font-family: "Noto Sans JP", sans-serif;
+      }
+    }
+  }
+  &-more{
+    margin-top: 13.2rem;
+    font-size: 3.2rem;
+    font-family: "dnp-shuei-nshogomincho-std", sans-serif;
+    position: relative;
+    padding-right: 4rem;
+    text-align: right;
+    margin-right: 9%;
+
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: block;
+      width: 3rem; 
+      height: 0.2rem; 
+      background: #FDFDFD;
+      font-family: "Noto Sans JP", sans-serif;
+    }
+    &::before{
+      content: "\003E";
+      position: absolute;
+      top: 47%;
+      right: -0.3rem;
+      transform: translateY(-50%);
+      font-size: 2.8rem;
+      font-weight: 300;
+      font-family: "Noto Sans JP", sans-serif;
+    }
+  }
+
+
+
+  }
+
+
+
+
+// header
+.header{
+    display: flex;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+    &_center{
+      width: 19%;
+      margin: 0 auto;
+      &-title{
+        // max-width: 19%;
+        width: 100%;
+      }
+    }
+    &_right{
+      position: absolute;
+      right: 0;
+      margin-right: 1.2rem;
+      font-family: dnp-shuei-nshogomincho-std, sans-serif;
+      font-size: 3.2rem;
+      font-weight: 600;
+      &-num{
+
+        font-size: 2vw;
+      }
+      &-tel{
+        vertical-align: top; 
+        font-size: 1.8rem;
+      }
+    }
+}
+
+.humburger {
+    position: absolute;
+    z-index: 3;
+    width: 19%;
+    height: 2.5rem;
+    margin-left: 2.2rem;
+    cursor: pointer;
+    span {
+        position: absolute;
+        display: inline-block;
+        background-color: black;
+        height: 1px;
+    }
+    span:nth-of-type(1) {
+        width: 4.5rem;
+        @include tab {
+          width: 3rem;
+        }
+      }
+      span:nth-of-type(2) {
+        top: 1.3rem;
+        width: 4.5rem;
+        @include tab {
+          width: 3rem;
+        }
+    }
+    span:nth-of-type(3) {
+        top: 2.8rem;
+        width: 4.5rem;
+        @include tab {
+          width: 3rem;
+        }
+    }
+  }
+
+//----- top-----
+.top{
+    width: 100%;
+    display: grid;
+    gap: 2rem; /* 要素間の間隔 */
+    // grid-template-columns: 2fr 1fr;
+    grid-template-columns: calc(66.67% - 1rem) calc(33.33% - 1rem);
+    img{
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+
+  &_left{
+    margin-bottom: 2rem;
+  }
+  &_right{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    border-left: 1px solid #000000;
+    &-up{
+      padding-right: 2rem;
+    }
+    &-down{
+      padding-right: 2rem;
+      padding-bottom: 2rem;
+      border-top: 1px solid #000000;
+    }
+  }
+
+}
+
+
+
+
+
+//----- about -----
+.about{
+  border: 1px solid #000000;
+  width: 100%;
+  background-image: url('/image/about.png');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #FDFDFD;
+  padding-bottom: 6rem;
+}
+
+
+//----- works -----
+.works{
+  &_sentence{
+    display: flex;
+    &-content{
+      align-items: center;
+      width: 65%;
+      display: flex;
+      margin-left: 2%;
+      margin-right: 10%;
+    }
+  }
+  &_content{
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &-img{
+      width: calc((100% / 5) - 1%); 
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
+
+
+
+
+
+
+
+// ----- flow -----
+.flow{
+  border: 1px solid #000000;
+  width: 100%;
+  background-image: url('/image/flow.png');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #FDFDFD;
+  font-family: dnp-shuei-nshogomincho-std, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  padding-bottom: 6rem;
+}
+
+
+// ----- contact -----
+
+.contact{
+
+  &_content{
+    display: flex;
+    font-family: dnp-shuei-nshogomincho-std, sans-serif;
+    font-size: 3.2rem;
+    &-left{
+      width: 50%;
+      margin-left: 10%;
+    }
+    &-right{
+      width: 50%;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      margin-left: 3%;
+      margin-right: 8%;    
+    }
+    &-tel{
+      margin-top: 4rem;
+
+    }
+    &-adressttl{
+      margin-top: 1.5rem;
+    }
+
+    &-adress{
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: 2.4rem;
+      font-weight: lighter;
+    }
+    &-form{
+      margin-top: 10rem;
+      margin-bottom: 6.2rem;
+    }
+    &-allow{
+      position: absolute;
+      font-size: 4.2rem;
+      transform: rotate(-45deg) translate(10%, -10%);
+    }
+  }
+}
+
+// footer
+.footer{
+  &_logo{
+      display: block;
+      margin: 4.8rem auto;
+    }
+  &_copy{
+    margin-left: 3%;
+    font-family: dnp-shuei-nshogomincho-std, sans-serif;
+    font-size: 1.7rem;
+  }
+}
+
+
+
+
+
+
+

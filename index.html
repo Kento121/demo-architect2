@@ -1,14 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/home.css" />
-  <script></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo-architect2</title>
   
+    <!-- Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/home.css">
+  
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'wix0ywa',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,
+        t=setTimeout(function(){
+          h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";
+        }, config.scriptTimeout),
+        tk=d.createElement("script"),
+        f=false,
+        s=d.getElementsByTagName("script")[0],
+        a;
+  
+        h.className+=" wf-loading";
+        tk.src='https://use.typekit.net/'+config.kitId+'.js';
+        tk.async=true;
+        tk.onload=tk.onreadystatechange=function(){
+          a=this.readyState;
+          if(f || a && a != "complete" && a != "loaded") return;
+          f=true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch(e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+<body>
+<!-- header -->
+  <header class="header">
+    <div class="header_left humburger">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="header_center">
+      <img src="image/title.svg" alt="title" class="header_center-title">
+    </div>
+    <div class="header_right">
+      <p class="header_right-num"><span class="header_right-tel">TEL</span> 123-456-7890</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="top">
+      <div class="top_left">
+        <img src="image/top_img1.png" alt="" class="top_img">
+      </div>
+      <div class="top_right">
+        <div class="top_right-up">
+          <img src="image/top_img2.png" alt="" class="top_img">
+        </div>
+        <div class="top_right-down">
+          <img src="image/top_img3.png" alt="" class="top_img">
+        </div>
+      </div>
+    </section>
+    <!-- about -->
+    <section class="about">
+      <h4 class="about_ttl comp_ttl">ABOUT</h4>
+      <p class="about_content comp_content">ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+      <p class="about_more comp-more">READ MORE</p>
+    </section>
+    <!-- works -->
+    <section class="works">
+      <div class="comp_sentence works_sentence">
+          <h4 class="comp_sentence-ttl works_sentence-ttl">WORKS</h4>
+          <p class="comp_sentence-content works_sentence-content">ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+      </div>
+      <div class="works_content">
+        <img src="image/works/works1.png" alt="works1" class="works_content-img">
+        <img src="image/works/works2.png" alt="works2" class="works_content-img">
+        <img src="image/works/works3.png" alt="works3" class="works_content-img">
+        <img src="image/works/works4.png" alt="works4" class="works_content-img">
+        <img src="image/works/works5.png" alt="works5" class="works_content-img">
+      </div>
+      <p class="works_more comp_sentence-more">VIEW MORE</p>
+    </section>
+    <!-- flow -->
+    <section class="flow">
+      <h4 class="flow_ttl comp_ttl">FLOW</h4>
+      <p class="flow_content comp_content">ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+      <p class="flow_more comp-more">LEARN MORE </p>
+    </section>
+    <!-- contact -->
+    <section class="contact">
+      <div class="comp_sentence contact_sentence">
+        <h4 class="comp_sentence-ttl contact_sentence-ttl">CONTACT US</h4>
+        <p class="comp_sentence-content contact_sentence-content">ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+      </div>
+      <hr>
+      <div class="contact_content">
+        <div class="contact_content-left">
+            <p class="contact_content-tel">TEL：123-456-7890</p>
+            <p class="contact_content-adressttl">ADDRESS：</p>
+            <p class="contact_content-adress">東京都ドボくんドボくんドボくんドボくんドボくんドボくんドボくんドボくんドボくんドボくんドボくんドボくん</p>
+            <div class="contact_content-form">
+                <p class="contact_content-email">EMAIL<span class="contact_content-allow">→</span></p>
+                <p class="contact_content-insta">INSTAGRAM<span class="contact_content-allow">→</span></p>
+            </div>
+        </div>
+        <div class="contact_content-right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207446.32915594245!2d139.5760557518479!3d35.66841030756815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2z5p2x5Lqs6YO95p2x5Lqs!5e0!3m2!1sja!2sjp!4v1720613298953!5m2!1sja!2sjp" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <hr>
+    </section>
+  </main>
+  <footer>
+    <img src="image/footer_ttl.png" alt="shovel_logo" class="footer_logo">
+    <p class="footer_copy">&copy;SHOVEL CREATORS</p>
+  </footer>
 </body>
 </html>
