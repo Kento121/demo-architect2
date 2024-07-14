@@ -15,36 +15,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/home.css">
   
-    <script>
-      (function(d) {
-        var config = {
-          kitId: 'wix0ywa',
-          scriptTimeout: 3000,
-          async: true
-        },
-        h=d.documentElement,
-        t=setTimeout(function(){
-          h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";
-        }, config.scriptTimeout),
-        tk=d.createElement("script"),
-        f=false,
-        s=d.getElementsByTagName("script")[0],
-        a;
-  
-        h.className+=" wf-loading";
-        tk.src='https://use.typekit.net/'+config.kitId+'.js';
-        tk.async=true;
-        tk.onload=tk.onreadystatechange=function(){
-          a=this.readyState;
-          if(f || a && a != "complete" && a != "loaded") return;
-          f=true;
-          clearTimeout(t);
-          try {
-            Typekit.load(config);
-          } catch(e) {}
-        };
-        s.parentNode.insertBefore(tk, s);
-      })(document);
+    <script src="js/home.js">
+
     </script>
   </head>
 <body>
@@ -52,6 +24,16 @@
   <header class="header">
     <div class="header_left humburger">
       <span></span><span></span><span></span>
+    </div>
+    <div class="humburger_menu">
+      <ul class="humburger_menu-items">
+        <li class="humburger_menu-list">MENU</li>
+        <li class="humburger_menu-list"><a href="#about">ABOUT</a></li>
+        <li class="humburger_menu-list"><a href="#works">WORKS</a></li>
+        <li class="humburger_menu-list"><a href="#flow">FLOW</a></li>
+        <li class="humburger_menu-list"><a href="#contact">CONTACT US</a></li>
+        <li class="humburger_menu-list"><a href="#insta">INSTAGRAM</a></li>
+      </ul>
     </div>
     <div class="header_center">
       <img src="image/title.svg" alt="title" class="header_center-title">
@@ -62,7 +44,7 @@
   </header>
 
   <main>
-    <section class="top">
+    <section id="top" class="top">
       <div class="top_left">
         <img src="image/top_img1.png" alt="" class="top_img">
       </div>
@@ -76,7 +58,7 @@
       </div>
     </section>
     <!-- about -->
-    <section class="about">
+    <section id="about" class="about">
       <div class="about_wrapper comp_wrapper">
         <h4 class="about_ttl comp_ttl">ABOUT</h4>
         <p class="about_content comp_content">ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
@@ -84,7 +66,7 @@
       </div>
     </section>
     <!-- works -->
-    <section class="works">
+    <section id="works" class="works">
       <div class="comp_sentence works_sentence">
           <h4 class="comp_sentence-ttl works_sentence-ttl">WORKS</h4>
           <hr class="comp_hr">
@@ -100,7 +82,7 @@
       <p class="works_more comp_sentence-more">VIEW MORE</p>
     </section>
     <!-- flow -->
-    <section class="flow">
+    <section id="flow" class="flow">
       <div class="flow_wrapper comp_wrapper">
         <h4 class="flow_ttl comp_ttl">FLOW</h4>
         <p class="flow_content comp_content">ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
@@ -108,7 +90,7 @@
       </div>
     </section>
     <!-- contact -->
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="comp_sentence contact_sentence">
         <h4 class="comp_sentence-ttl contact_sentence-ttl">CONTACT US</h4>
         <hr class="comp_hr">
