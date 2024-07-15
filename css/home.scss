@@ -32,7 +32,7 @@ body{
     font-weight: 700;
     font-style: normal;
     font-size: 5.2rem;
-    @include sp{
+    @include tab{
       margin-left: 5%;
       font-size: 3.2rem;
     }
@@ -53,7 +53,7 @@ body{
     font-weight: 300;
     font-family: "Noto Sans JP", sans-serif;
     line-height: 1.8;
-    @include sp{
+    @include tab{
       left: 0;
       margin: 0 auto;
       width: 90%;
@@ -61,7 +61,7 @@ body{
   }
   &_sentence{
     display: flex;
-    @include sp{
+    @include tab{
       display: block;
     }
     &-content{
@@ -74,7 +74,7 @@ body{
       letter-spacing: 0.2rem;
       font-weight: 300;
       font-family: "Noto Sans JP", sans-serif;
-      @include sp{
+      @include tab{
         width: 90%;
         margin:1.8rem auto;
       }
@@ -87,7 +87,7 @@ body{
       font-style: normal;
       font-size: 5.2rem;
       white-space: nowrap;
-      @include sp{
+      @include tab{
           margin-left: 5%;
           font-size: 3.2rem;
       }
@@ -97,7 +97,7 @@ body{
       font-family: "dnp-shuei-nshogomincho-std", sans-serif;
       position: relative;
       padding-right: 4rem;
-      text-align: right;
+      display: inline-block;
       margin-right: 9%;
       cursor: pointer;
       &::after{
@@ -132,13 +132,16 @@ body{
       }
     }
   }
+  &-flex{
+    text-align: right;
+  }
   &-more{
     margin-top: 13.2rem;
     font-size: 3.2rem;
     font-family: "dnp-shuei-nshogomincho-std", sans-serif;
     position: relative;
     padding-right: 4rem;
-    text-align: right;
+    display: inline-block;
     margin-right: 9%;
     cursor: pointer;
 
@@ -250,7 +253,7 @@ body{
 }
 
 .humburger {
-    position: fixed;
+    position: absolute;
     z-index: 3;
     width: 5rem;
     height: 104px;
@@ -464,14 +467,14 @@ body{
     display: flex;
     font-family: dnp-shuei-nshogomincho-std, sans-serif;
     font-size: 3.2rem;
-    @include sp{
+    @include tab{
       display: flex;
       flex-direction: column-reverse; 
     }
     &-left{
       width: 50%;
       margin-left: 10%;
-      @include sp{
+      @include tab{
         width: 90%;
         margin: 0 auto;
       }
@@ -483,7 +486,7 @@ body{
       margin-left: 3%;
       margin-right: 8%;    
       border: none;
-      @include sp{
+      @include tab{
         width: 90%;
         margin: 0 auto;
         height: 38rem;
@@ -506,7 +509,7 @@ body{
       display: inline-block;
       margin-top: 10rem;
       margin-bottom: 6.2rem;
-      @include sp{
+      @include tab{
         margin-bottom: 1.9rem;
       }
     }
@@ -534,7 +537,7 @@ body{
     }
   }
   &_hr{
-    @include sp{
+    @include tab{
       display: none;
     }
   }
@@ -545,7 +548,7 @@ body{
   &_logo{
       display: block;
       margin: 4.8rem auto;
-      @include sp{
+      @include tab{
         width: 55%;
         margin-top: 2rem;
       }
@@ -554,7 +557,7 @@ body{
     margin-left: 3%;
     font-family: dnp-shuei-nshogomincho-std, sans-serif;
     font-size: 1.7rem;
-    @include sp{
+    @include tab{
       margin: 0 auto;
       margin-bottom: 6rem;
       text-align: center;
