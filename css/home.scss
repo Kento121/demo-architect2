@@ -12,243 +12,236 @@ $sp: 600px;
     }
 }
 
-
-
 // 共通
 html {
-  font-size: 62.5%;
- }
-body{
-  border: 1px solid #000000;
-  max-width: 1512px;
+    font-size: 62.5%;
+}
+body {
+    border: 1px solid #000000;
+    max-width: 1512px;
 }
 
-.comp{
-  &_ttl{
-    position:relative;
-    margin-top: 2rem;
-    margin-left:10% ;
-    font-family: "dnp-shuei-nshogomincho-std", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 5.2rem;
-    @include tab{
-      margin-left: 5%;
-      font-size: 3.2rem;
+.comp {
+    &_ttl {
+        position: relative;
+        margin-top: 2rem;
+        margin-left: 10%;
+        font-family: "dnp-shuei-nshogomincho-std", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 5.2rem;
+        @include tab {
+            margin-left: 5%;
+            font-size: 3.2rem;
+        }
     }
-  }
-  &_wrapper{
-    width: calc(100% - 10px);
-    margin: 5px auto;
-    border: 1px solid white;
-    box-sizing: border-box;
-    padding-bottom: 6rem;
-  }
-  &_content{
-    position: relative;
-    left: 12%;
-    width: 35%;
-    font-size: 1.6rem;
-    letter-spacing: 0.2rem;
-    font-weight: 300;
-    font-family: "Noto Sans JP", sans-serif;
-    line-height: 1.8;
-    @include tab{
-      left: 0;
-      margin: 0 auto;
-      width: 90%;
+    &_wrapper {
+        width: calc(100% - 10px);
+        margin: 5px auto;
+        border: 1px solid white;
+        box-sizing: border-box;
+        padding-bottom: 6rem;
     }
-  }
-  &_sentence{
-    display: flex;
-    @include tab{
-      display: block;
-    }
-    &-content{
-      align-items: center;
-      width: 65%;
-      display: flex;
-      margin-left: 2%;
-      margin-right: 10%;
-      font-size: 1.6rem;
-      letter-spacing: 0.2rem;
-      font-weight: 300;
-      font-family: "Noto Sans JP", sans-serif;
-      @include tab{
-        width: 90%;
-        margin:1.8rem auto;
-      }
-    }
-    &-ttl{
-      position: relative;
-      margin-left: 10%;
-      font-family: "dnp-shuei-nshogomincho-std", sans-serif;
-      font-weight: 700;
-      font-style: normal;
-      font-size: 5.2rem;
-      white-space: nowrap;
-      @include tab{
-          margin-left: 5%;
-          font-size: 3.2rem;
-      }
-    }
-    &-more{
-      font-size: 3.2rem;
-      font-family: "dnp-shuei-nshogomincho-std", sans-serif;
-      position: relative;
-      padding-right: 4rem;
-      display: inline-block;
-      margin-right: 9%;
-      cursor: pointer;
-      &::after{
-        content: "";
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        display: block;
-        width: 3rem; 
-        height: 0.2rem; 
-        background: #000000;
-        font-family: "Noto Sans JP", sans-serif;
-        transition: right 0.6s ease; 
-      }
-      &::before{
-        content: "\003E";
-        position: absolute;
-        top: 47%;
-        right: -0.3rem;
-        transform: translateY(-50%);
-        font-size: 2.8rem;
+    &_content {
+        position: relative;
+        left: 12%;
+        width: 35%;
+        font-size: 1.6rem;
+        letter-spacing: 0.2rem;
         font-weight: 300;
         font-family: "Noto Sans JP", sans-serif;
-        transition: right 0.6s ease; 
-      }
-      &:hover::after {
-        right: -0.5rem; /* ホバー時に矢印を右にずらす */
-      }
-      &:hover::before {
-        right: -0.8rem; /* ホバー時に矢印を右にずらす */
-      }
+        line-height: 1.8;
+        @include tab {
+            left: 0;
+            margin: 0 auto;
+            width: 90%;
+        }
     }
-  }
-  &-flex{
-    text-align: right;
-  }
-  &-more{
-    margin-top: 13.2rem;
-    font-size: 3.2rem;
-    font-family: "dnp-shuei-nshogomincho-std", sans-serif;
-    position: relative;
-    padding-right: 4rem;
-    display: inline-block;
-    margin-right: 9%;
-    cursor: pointer;
-
-    &::after{
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      display: block;
-      width: 3rem; 
-      height: 0.2rem; 
-      background: #FDFDFD;
-      font-family: "Noto Sans JP", sans-serif;
-      transition: right 0.6s ease; 
+    &_sentence {
+        display: flex;
+        @include tab {
+            display: block;
+        }
+        &-content {
+            align-items: center;
+            width: 65%;
+            display: flex;
+            margin-left: 2%;
+            margin-right: 10%;
+            font-size: 1.6rem;
+            letter-spacing: 0.2rem;
+            font-weight: 300;
+            font-family: "Noto Sans JP", sans-serif;
+            @include tab {
+                width: 90%;
+                margin: 1.8rem auto;
+            }
+        }
+        &-ttl {
+            position: relative;
+            margin-left: 10%;
+            font-family: "dnp-shuei-nshogomincho-std", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 5.2rem;
+            white-space: nowrap;
+            @include tab {
+                margin-left: 5%;
+                font-size: 3.2rem;
+            }
+        }
+        &-more {
+            font-size: 3.2rem;
+            font-family: "dnp-shuei-nshogomincho-std", sans-serif;
+            position: relative;
+            padding-right: 4rem;
+            display: inline-block;
+            margin-right: 9%;
+            cursor: pointer;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                display: block;
+                width: 3rem;
+                height: 0.2rem;
+                background: #000000;
+                font-family: "Noto Sans JP", sans-serif;
+                transition: right 0.6s ease;
+            }
+            &::before {
+                content: "\003E";
+                position: absolute;
+                top: 47%;
+                right: -0.3rem;
+                transform: translateY(-50%);
+                font-size: 2.8rem;
+                font-weight: 300;
+                font-family: "Noto Sans JP", sans-serif;
+                transition: right 0.6s ease;
+            }
+            &:hover::after {
+                right: -0.5rem; /* ホバー時に矢印を右にずらす */
+            }
+            &:hover::before {
+                right: -0.8rem; /* ホバー時に矢印を右にずらす */
+            }
+        }
     }
-    &::before{
-      content: "\003E";
-      position: absolute;
-      top: 47%;
-      right: -0.3rem;
-      transform: translateY(-50%);
-      font-size: 2.8rem;
-      font-weight: 300;
-      font-family: "Noto Sans JP", sans-serif;
-      transition: right 0.6s ease; 
+    &-flex {
+        text-align: right;
     }
-  &:hover::after {
-    right: -0.5rem; /* ホバー時に矢印を右にずらす */
-  }
-  &:hover::before {
-    right: -0.8rem; /* ホバー時に矢印を右にずらす */
-  }
-  }
+    &-more {
+        margin-top: 13.2rem;
+        font-size: 3.2rem;
+        font-family: "dnp-shuei-nshogomincho-std", sans-serif;
+        position: relative;
+        padding-right: 4rem;
+        display: inline-block;
+        margin-right: 9%;
+        cursor: pointer;
 
-
-
-  }
-
-
-
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            display: block;
+            width: 3rem;
+            height: 0.2rem;
+            background: #fdfdfd;
+            font-family: "Noto Sans JP", sans-serif;
+            transition: right 0.6s ease;
+        }
+        &::before {
+            content: "\003E";
+            position: absolute;
+            top: 47%;
+            right: -0.3rem;
+            transform: translateY(-50%);
+            font-size: 2.8rem;
+            font-weight: 300;
+            font-family: "Noto Sans JP", sans-serif;
+            transition: right 0.6s ease;
+        }
+        &:hover::after {
+            right: -0.5rem; /* ホバー時に矢印を右にずらす */
+        }
+        &:hover::before {
+            right: -0.8rem; /* ホバー時に矢印を右にずらす */
+        }
+    }
+}
 
 // header
-.header{
+.header {
     display: flex;
     // position: fixed; /* ヘッダーを固定 */
     top: 0;
     height: 104px;
+    // MEMO: box-sizingで対応できそう
     width: calc(100% - 1px);
-    background-color: #FDFDFD;
+    background-color: #fdfdfd;
     justify-content: space-between;
     border-bottom: 1px solid #000000;
     z-index: 100;
-    @include sp{
-      height: 140px;
+    @include sp {
+        height: 140px;
     }
-    &_center{
-      width: 20%;
-      margin: 0 auto;
-      align-self: center;
-      @include tab{
-        width: 30%;
-      }
-      @include sp{
-        width: 20rem;
-        align-self: flex-start;
+    &_center {
+        width: 20%;
+        margin: 0 auto;
+        align-self: center;
+        @include tab {
+            width: 30%;
+        }
+        @include sp {
+            width: 20rem;
+            align-self: flex-start;
+            position: absolute;
+            top: 1rem;
+            right: 5%;
+        }
+        &-title {
+            // max-width: 19%;
+            width: 100%;
+        }
+    }
+    &_right {
         position: absolute;
-        top: 1rem;
-        right: 5%;
-      }
-      &-title{
-        // max-width: 19%;
-        width: 100%;
-      }
-    }
-    &_right{
-      position: absolute;
-      right: 0;
-      height: 104px;
-      margin-right: 1.2rem;
-      font-family: dnp-shuei-nshogomincho-std, sans-serif;
-      font-size: 3.2rem;
-      font-weight: 600;
-      z-index: 1;
-      @include sp{
-        margin-right: 0;
-        top: 3rem;
-        right: 5%;
-      }
-      &-num{
-        font-size: 2vw;
-        display: flex;
-        align-items: center;
+        right: 0;
         height: 104px;
-        vertical-align: middle;
-        @include tab{
-          font-size: 3vw;
+        margin-right: 1.2rem;
+        font-family: dnp-shuei-nshogomincho-std, sans-serif;
+        font-size: 3.2rem;
+        font-weight: 600;
+        z-index: 1;
+        @include sp {
+            margin-right: 0;
+            top: 3rem;
+            right: 5%;
         }
-        @include sp{
-          height: 140px;
-          font-size: 2.4rem;
+        &-num {
+            font-size: 2vw;
+            display: flex;
+            align-items: center;
+            height: 104px;
+            vertical-align: middle;
+            @include tab {
+                font-size: 3vw;
+            }
+            @include sp {
+                height: 140px;
+                font-size: 2.4rem;
+            }
         }
-      }
-      &-tel{
-        vertical-align: top; 
-        font-size: 1.8rem;
-      }
+        &-tel {
+            vertical-align: top;
+            font-size: 1.8rem;
+        }
     }
 }
 
@@ -268,48 +261,48 @@ body{
         transition: transform 0.6s ease;
     }
     span:nth-of-type(1) {
-      top: 30%;
+        top: 30%;
         width: 4.5rem;
         @include sp {
-          width: 3rem;
+            width: 3rem;
         }
-      }
-      span:nth-of-type(2) {
+    }
+    span:nth-of-type(2) {
         top: 45%;
         width: 4.5rem;
         @include sp {
-          top: 40%;
-          width: 3rem;
+            top: 40%;
+            width: 3rem;
         }
-      }
-      span:nth-of-type(3) {
+    }
+    span:nth-of-type(3) {
         top: 60%;
         width: 4.5rem;
-        @include sp{
-          top: 50%;
-          width: 3rem;
+        @include sp {
+            top: 50%;
+            width: 3rem;
         }
-      }
+    }
 
-      &.active span:nth-of-type(1) {
+    &.active span:nth-of-type(1) {
         transform: rotate(45deg) translate(25px, 5px);
-        @include sp{
-          transform: rotate(45deg) translate(15px, 5px);
+        @include sp {
+            transform: rotate(45deg) translate(15px, 5px);
         }
-      }
+    }
 
-      &.active span:nth-of-type(2) {
+    &.active span:nth-of-type(2) {
         opacity: 0;
-      }
+    }
 
-      &.active span:nth-of-type(3) {
+    &.active span:nth-of-type(3) {
         transform: rotate(-45deg) translate(15px, 0px);
-        @include sp{
-          transform: rotate(-45deg) translate(10px, 0px);
+        @include sp {
+            transform: rotate(-45deg) translate(10px, 0px);
         }
-      }
-      &_menu{
-        background-color: #FDFDFD;
+    }
+    &_menu {
+        background-color: #fdfdfd;
         position: fixed;
         top: 0;
         width: 40%;
@@ -318,257 +311,232 @@ body{
         overflow-x: hidden;
         transition: 0.5s;
         z-index: 2;
-        @include sp{
-          height: 39rem;
+        @include sp {
+            height: 39rem;
         }
-        &.active{
-          display: block;
-          transform: translateX(calc(0% - 1px));
+        &.active {
+            display: block;
+            transform: translateX(calc(0% - 1px));
         }
-        &-items{
-          border: 1px solid #000000;
+        &-items {
+            border: 1px solid #000000;
         }
-        &-list{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 10rem;
-          padding: 1.2rem 0;
-          border-bottom: 1px solid #000000;
-          font-size: 1.8rem;
-          font-family: dnp-shuei-nshogomincho-std, sans-serif;
-          @include sp{
-            height: 6rem; 
-          }
-          a{
-          text-decoration: none; /* 下線を消す */
-          color: inherit;
-          }
-          &:nth-child(1){
-            height: 12rem;
-            @include sp{
-              height: 8.8rem;
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10rem;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid #000000;
+            font-size: 1.8rem;
+            font-family: dnp-shuei-nshogomincho-std, sans-serif;
+            @include sp {
+                height: 6rem;
             }
-          }
-          &:nth-child(6){
-            border-bottom: none;
-          }
-
+            a {
+                text-decoration: none; /* 下線を消す */
+                color: inherit;
+            }
+            &:nth-child(1) {
+                height: 12rem;
+                @include sp {
+                    height: 8.8rem;
+                }
+            }
+            &:nth-child(6) {
+                border-bottom: none;
+            }
         }
-      }
-  }
+    }
+}
 
 //----- top-----
-.top{
+.top {
     width: 100%;
     display: grid;
     gap: 2rem;
     grid-template-columns: calc(66.67% - 1rem) calc(33.33% - 1rem);
-    @include sp{
-      display: block;
+    @include sp {
+        display: block;
     }
-    img{
-      height: 100%;
-      width: 100%;
-      display: block;
+    img {
+        height: 100%;
+        width: 100%;
+        display: block;
     }
 
-  &_left{
-    margin-bottom: 2rem;
-    @include sp{
-      padding-right: 2rem;
+    &_left {
+        margin-bottom: 2rem;
+        @include sp {
+            padding-right: 2rem;
+        }
     }
-  }
-  &_right{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 2rem;
-    border-left: 1px solid #000000;
-    &-up{
-      padding-right: 2rem;
-      @include sp{
-        border-top: 1px solid #000000;
-        padding-right: 0;
-        padding-left: 2rem;
-      }
+    &_right {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+        border-left: 1px solid #000000;
+        &-up {
+            padding-right: 2rem;
+            @include sp {
+                border-top: 1px solid #000000;
+                padding-right: 0;
+                padding-left: 2rem;
+            }
+        }
+        &-down {
+            padding-right: 2rem;
+            padding-bottom: 2rem;
+            border-top: 1px solid #000000;
+        }
     }
-    &-down{
-      padding-right: 2rem;
-      padding-bottom: 2rem;
-      border-top: 1px solid #000000;
-    }
-  }
-
 }
-
-
-
-
 
 //----- about -----
-.about{
-  border: 1px solid #000000;
-  width: 100%;
-  background-image: url('/image/about.png');
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #FDFDFD;
-  @include sp{
-    background-image: url('/image/about_sp.png');
-  }
+.about {
+    border: 1px solid #000000;
+    width: 100%;
+    background-image: url("/image/about.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fdfdfd;
+    @include sp {
+        background-image: url("/image/about_sp.png");
+    }
 }
-
 
 //----- works -----
-.works{
-  &_content{
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-    display: flex;
-    overflow-x: auto; /* 横スクロールを有効にする */
-    overflow-y: hidden; /* 縦方向のはみ出し部分を隠す */
-    white-space: nowrap; /* 改行を防ぐ */
-    -webkit-overflow-scrolling: touch; 
-    &-img{
-      flex: 0 0 auto; /* 子要素をその内容に基づいてサイズ変更し、縮小させない */
-      margin-right: 10px; 
+.works {
+    &_content {
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+        display: flex;
+        overflow-x: auto; /* 横スクロールを有効にする */
+        overflow-y: hidden; /* 縦方向のはみ出し部分を隠す */
+        white-space: nowrap; /* 改行を防ぐ */
+        -webkit-overflow-scrolling: touch;
+        &-img {
+            flex: 0 0 auto; /* 子要素をその内容に基づいてサイズ変更し、縮小させない */
+            margin-right: 10px;
+        }
     }
-  }
 }
-
-
-
-
-
-
 
 // ----- flow -----
-.flow{
-  border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000;
-  width: 100%;
-  background-image: url('/image/flow.png');
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #FDFDFD;
-  font-family: dnp-shuei-nshogomincho-std, sans-serif;
-  font-style: normal;
-  font-weight: 700;
+.flow {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    width: 100%;
+    background-image: url("/image/flow.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fdfdfd;
+    font-family: dnp-shuei-nshogomincho-std, sans-serif;
+    font-style: normal;
+    font-weight: 700;
 }
-
 
 // ----- contact -----
 
-.contact{
+.contact {
+    &_content {
+        display: flex;
+        font-family: dnp-shuei-nshogomincho-std, sans-serif;
+        font-size: 3.2rem;
+        @include tab {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &-left {
+            width: 50%;
+            margin-left: 10%;
+            @include tab {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        &-right {
+            width: 50%;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+            margin-left: 3%;
+            margin-right: 8%;
+            border: none;
+            @include tab {
+                width: 90%;
+                margin: 0 auto;
+                height: 38rem;
+            }
+        }
+        &-tel {
+            margin-top: 4rem;
+        }
+        &-adressttl {
+            margin-top: 1.5rem;
+        }
 
-  &_content{
-    display: flex;
-    font-family: dnp-shuei-nshogomincho-std, sans-serif;
-    font-size: 3.2rem;
-    @include tab{
-      display: flex;
-      flex-direction: column-reverse; 
+        &-adress {
+            font-family: "Noto Sans JP", sans-serif;
+            font-size: 2.4rem;
+            font-weight: lighter;
+        }
+        &-form {
+            display: inline-block;
+            margin-top: 10rem;
+            margin-bottom: 6.2rem;
+            @include tab {
+                margin-bottom: 1.9rem;
+            }
+        }
+        &-email {
+            cursor: pointer;
+            &:hover .contact_content-allow {
+                transform: rotate(-45deg) translate(25%, -10%); // ホバー時に右上にずらす
+            }
+        }
+        &-insta {
+            cursor: pointer;
+            &:hover .contact_content-allow {
+                transform: rotate(-45deg) translate(25%, -10%); // ホバー時に右上にずらす
+            }
+        }
+        &-allow {
+            position: absolute;
+            font-size: 4.2rem;
+            transform: rotate(-45deg) translate(10%, -10%);
+            transition: transform 0.6s ease;
+            &:hover {
+                transform: rotate(-45deg) translate(25%, -10%);
+            }
+        }
     }
-    &-left{
-      width: 50%;
-      margin-left: 10%;
-      @include tab{
-        width: 90%;
-        margin: 0 auto;
-      }
+    &_hr {
+        @include tab {
+            display: none;
+        }
     }
-    &-right{
-      width: 50%;
-      margin-top: 2.5rem;
-      margin-bottom: 2.5rem;
-      margin-left: 3%;
-      margin-right: 8%;    
-      border: none;
-      @include tab{
-        width: 90%;
-        margin: 0 auto;
-        height: 38rem;
-      }
-    }
-    &-tel{
-      margin-top: 4rem;
-
-    }
-    &-adressttl{
-      margin-top: 1.5rem;
-    }
-
-    &-adress{
-      font-family: "Noto Sans JP", sans-serif;
-      font-size: 2.4rem;
-      font-weight: lighter;
-    }
-    &-form{
-      display: inline-block;
-      margin-top: 10rem;
-      margin-bottom: 6.2rem;
-      @include tab{
-        margin-bottom: 1.9rem;
-      }
-    }
-    &-email{
-      cursor: pointer; 
-      &:hover .contact_content-allow {
-        transform: rotate(-45deg) translate(25%, -10%); // ホバー時に右上にずらす
-      }
-    }
-    &-insta{
-      cursor: pointer; 
-      &:hover .contact_content-allow {
-        transform: rotate(-45deg) translate(25%, -10%); // ホバー時に右上にずらす
-      }
-    }
-    &-allow{
-      position: absolute;
-      font-size: 4.2rem;
-      transform: rotate(-45deg) translate(10%, -10%);
-      transition: transform 0.6s ease; 
-      &:hover{
-        transform: rotate(-45deg) translate(25%, -10%);
-      }
-      
-    }
-  }
-  &_hr{
-    @include tab{
-      display: none;
-    }
-  }
 }
 
 // footer
-.footer{
-  &_logo{
-      display: block;
-      margin: 4.8rem auto;
-      @include tab{
-        width: 55%;
-        margin-top: 2rem;
-      }
+.footer {
+    &_logo {
+        display: block;
+        margin: 4.8rem auto;
+        @include tab {
+            width: 55%;
+            margin-top: 2rem;
+        }
     }
-  &_copy{
-    margin-left: 3%;
-    font-family: dnp-shuei-nshogomincho-std, sans-serif;
-    font-size: 1.7rem;
-    @include tab{
-      margin: 0 auto;
-      margin-bottom: 6rem;
-      text-align: center;
-
+    &_copy {
+        margin-left: 3%;
+        font-family: dnp-shuei-nshogomincho-std, sans-serif;
+        font-size: 1.7rem;
+        @include tab {
+            margin: 0 auto;
+            margin-bottom: 6rem;
+            text-align: center;
+        }
     }
-  }
 }
-
-
-
-
-
-
-
