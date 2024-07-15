@@ -17,7 +17,7 @@ body {
   font-style: normal;
   font-size: 5.2rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .comp_ttl {
     margin-left: 5%;
     font-size: 3.2rem;
@@ -40,7 +40,7 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   line-height: 1.8;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .comp_content {
     left: 0;
     margin: 0 auto;
@@ -50,7 +50,7 @@ body {
 .comp_sentence {
   display: flex;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .comp_sentence {
     display: block;
   }
@@ -66,7 +66,7 @@ body {
   font-weight: 300;
   font-family: "Noto Sans JP", sans-serif;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .comp_sentence-content {
     width: 90%;
     margin: 1.8rem auto;
@@ -81,7 +81,7 @@ body {
   font-size: 5.2rem;
   white-space: nowrap;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .comp_sentence-ttl {
     margin-left: 5%;
     font-size: 3.2rem;
@@ -92,7 +92,7 @@ body {
   font-family: "dnp-shuei-nshogomincho-std", sans-serif;
   position: relative;
   padding-right: 4rem;
-  text-align: right;
+  display: inline-block;
   margin-right: 9%;
   cursor: pointer;
 }
@@ -126,13 +126,16 @@ body {
 .comp_sentence-more:hover::before {
   right: -0.8rem; /* ホバー時に矢印を右にずらす */
 }
+.comp-flex {
+  text-align: right;
+}
 .comp-more {
   margin-top: 13.2rem;
   font-size: 3.2rem;
   font-family: "dnp-shuei-nshogomincho-std", sans-serif;
   position: relative;
   padding-right: 4rem;
-  text-align: right;
+  display: inline-block;
   margin-right: 9%;
   cursor: pointer;
 }
@@ -245,7 +248,7 @@ body {
 }
 
 .humburger {
-  position: fixed;
+  position: absolute;
   z-index: 3;
   width: 5rem;
   height: 104px;
@@ -455,7 +458,7 @@ body {
   font-family: dnp-shuei-nshogomincho-std, sans-serif;
   font-size: 3.2rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .contact_content {
     display: flex;
     flex-direction: column-reverse;
@@ -465,7 +468,7 @@ body {
   width: 50%;
   margin-left: 10%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .contact_content-left {
     width: 90%;
     margin: 0 auto;
@@ -479,7 +482,7 @@ body {
   margin-right: 8%;
   border: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .contact_content-right {
     width: 90%;
     margin: 0 auto;
@@ -502,7 +505,7 @@ body {
   margin-top: 10rem;
   margin-bottom: 6.2rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .contact_content-form {
     margin-bottom: 1.9rem;
   }
@@ -528,7 +531,7 @@ body {
 .contact_content-allow:hover {
   transform: rotate(-45deg) translate(25%, -10%);
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .contact_hr {
     display: none;
   }
@@ -538,7 +541,7 @@ body {
   display: block;
   margin: 4.8rem auto;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .footer_logo {
     width: 55%;
     margin-top: 2rem;
@@ -549,7 +552,7 @@ body {
   font-family: dnp-shuei-nshogomincho-std, sans-serif;
   font-size: 1.7rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .footer_copy {
     margin: 0 auto;
     margin-bottom: 6rem;
