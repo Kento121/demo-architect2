@@ -177,7 +177,7 @@ body {
   width: calc(100% - 1px);
   background-color: #FDFDFD;
   justify-content: space-between;
-  border: 1px solid #000000;
+  border-bottom: 1px solid #000000;
   z-index: 100;
 }
 @media screen and (max-width: 600px) {
@@ -314,7 +314,7 @@ body {
   background-color: #FDFDFD;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 40%;
   height: 62.2rem;
   transform: translateX(-100%);
   overflow-x: hidden;
