@@ -1,0 +1,33 @@
+## 共通
+・共通_見出しはletter-spacing を5%に設定
+・PC_見出し下のテキストのpadding-leftを小さめに
+・READ MORE→のhover時の色をグリーン系に（松本さんタスク）
+・PC_全体のcontainer　max-width超えた時に中央寄せ
+・SP_READ MOREの文字を小さく
+・共通_白(#FDFDFD)と黒(#181818)が基本
+
+## ヘッダー
+・PC_電話番号の文字を32px、telを左上に
+・PC_ハンバーガー展開時のバッテン
+・共通_ハンバーガーの幅55px、太さを2px
+・PC_ハンバーガーmenuのhover時色反転＆左から変色の動き
+・PC_ハンバーガーmenuの高さを均等に＋上のMENUの文字大きく
+・PC_ハンバーガーmenuのリンクの範囲を全体に
+・共通_ロゴのリンク化
+・SP_menuとバッテンの重なり＋バッテン場所固定
+
+## TOP
+・SP_2枚目以降の大きさ
+
+## works
+・PC_スクロール画像がどの画面幅でもはみ出すように設定
+・SP_1枚目が小さい
+・共通_自動スクロール https://qiita.com/rhrh__8/items/66466fd358060f412060
+
+## Contact
+・EMAIL、Instagramのhover時の色をグリーン系に（松本さんタスク）
+・SP_ADDRESSの下の余白小さく
+・SP_文字の大きさ
+
+## 今後
+・TOPの画像がふわっと変わっていくUIとか好まれそう
