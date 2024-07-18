@@ -17,8 +17,9 @@ html {
     font-size: 62.5%;
 }
 body {
-    border: 1px solid #000000;
+    border: 1px solid #181818;
     max-width: 1512px;
+    margin: 0 auto;
 }
 
 .comp {
@@ -30,6 +31,7 @@ body {
         font-weight: 700;
         font-style: normal;
         font-size: 5.2rem;
+        letter-spacing: 0.05em;
         @include tab {
             margin-left: 5%;
             font-size: 3.2rem;
@@ -43,8 +45,8 @@ body {
         padding-bottom: 6rem;
     }
     &_content {
-        position: relative;
-        left: 12%;
+        margin-left: 11%;
+        margin-bottom: 13.2rem;
         width: 35%;
         font-size: 1.6rem;
         letter-spacing: 0.2rem;
@@ -54,6 +56,7 @@ body {
         @include tab {
             left: 0;
             margin: 0 auto;
+            margin-bottom: 18rem;
             width: 90%;
         }
     }
@@ -69,7 +72,6 @@ body {
             margin-left: 2%;
             margin-right: 10%;
             font-size: 1.6rem;
-            letter-spacing: 0.2rem;
             font-weight: 300;
             font-family: "Noto Sans JP", sans-serif;
             @include tab {
@@ -84,6 +86,7 @@ body {
             font-weight: 700;
             font-style: normal;
             font-size: 5.2rem;
+            letter-spacing: 0.05em;
             white-space: nowrap;
             @include tab {
                 margin-left: 5%;
@@ -93,162 +96,137 @@ body {
         &-more {
             font-size: 3.2rem;
             font-family: "dnp-shuei-nshogomincho-std", sans-serif;
-            position: relative;
-            padding-right: 4rem;
             display: inline-block;
             margin-right: 9%;
             cursor: pointer;
-            &::after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-                display: block;
-                width: 3rem;
-                height: 0.2rem;
-                background: #000000;
-                font-family: "Noto Sans JP", sans-serif;
-                transition: right 0.6s ease;
+            transition: transform 0.6s ease, color 0.6s ease; 
+            &:hover{
+              color: #00552e;
             }
-            &::before {
-                content: "\003E";
-                position: absolute;
-                top: 47%;
-                right: -0.3rem;
-                transform: translateY(-50%);
-                font-size: 2.8rem;
-                font-weight: 300;
-                font-family: "Noto Sans JP", sans-serif;
-                transition: right 0.6s ease;
+            &:hover .comp-more-allow {
+              transform:translate(25%, 0%);
             }
-            &:hover::after {
-                right: -0.5rem; /* ホバー時に矢印を右にずらす */
+            &-allow {
+              position: absolute;
+              margin-left: 1rem;
+              transition: transform 0.6s ease, color 0.6s ease;
+              color: #181818; 
+              &:hover {
+                color: #181818;
+                transform:translate(25%, 0%);
+              }
             }
-            &:hover::before {
-                right: -0.8rem; /* ホバー時に矢印を右にずらす */
-            }
+            @include sp {
+              font-size: 2.4rem;
+          }
         }
     }
     &-flex {
         text-align: right;
     }
     &-more {
-        margin-top: 13.2rem;
         font-size: 3.2rem;
         font-family: "dnp-shuei-nshogomincho-std", sans-serif;
-        position: relative;
         padding-right: 4rem;
         display: inline-block;
         margin-right: 9%;
         cursor: pointer;
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            display: block;
-            width: 3rem;
-            height: 0.2rem;
-            background: #fdfdfd;
-            font-family: "Noto Sans JP", sans-serif;
-            transition: right 0.6s ease;
+        transition: transform 0.6s ease, color 0.6s ease; 
+        &:hover{
+          color: #00552e;
         }
-        &::before {
-            content: "\003E";
-            position: absolute;
-            top: 47%;
-            right: -0.3rem;
-            transform: translateY(-50%);
-            font-size: 2.8rem;
-            font-weight: 300;
-            font-family: "Noto Sans JP", sans-serif;
-            transition: right 0.6s ease;
+        &:hover .comp-more-allow {
+          transform:translate(25%, 0%);
         }
-        &:hover::after {
-            right: -0.5rem; /* ホバー時に矢印を右にずらす */
-        }
-        &:hover::before {
-            right: -0.8rem; /* ホバー時に矢印を右にずらす */
-        }
+        &-allow {
+          position: absolute;
+          margin-left: 1rem;
+          transition: transform 0.6s ease, color 0.6s ease;
+          color: #FDFDFD; 
+          &:hover {
+            color: #FDFDFD;
+            transform:translate(25%, 0%);
+          }
+      }
+      @include sp {
+        font-size: 2.4rem;
+    }
     }
 }
 
 // header
 .header {
     display: flex;
-    // position: fixed; /* ヘッダーを固定 */
     top: 0;
     height: 104px;
     // MEMO: box-sizingで対応できそう
     width: calc(100% - 1px);
-    background-color: #fdfdfd;
+    background-color: #FDFDFD;
     justify-content: space-between;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #181818;
     z-index: 100;
-    @include sp {
+    @include tab {
         height: 140px;
     }
     &_center {
-        width: 20%;
-        margin: 0 auto;
-        align-self: center;
-        @include tab {
-            width: 30%;
-        }
-        @include sp {
-            width: 20rem;
-            align-self: flex-start;
-            position: absolute;
-            top: 1rem;
-            right: 5%;
-        }
         &-title {
-            // max-width: 19%;
-            width: 100%;
+            position: absolute;
+            top: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 32rem;
+            cursor: pointer;
+            img{
+                width: 100%;
+            }
+            @include tab {
+                top: 1rem;
+                right: 5%;
+                transform: translateX(0);
+                width: 24rem;
+            }
+            @include sp{
+                width: 20rem;
+            }
         }
     }
     &_right {
-        position: absolute;
-        right: 0;
+        position: relative;
         height: 104px;
         margin-right: 1.2rem;
         font-family: dnp-shuei-nshogomincho-std, sans-serif;
         font-size: 3.2rem;
         font-weight: 600;
         z-index: 1;
-        @include sp {
+        @include tab {
+            position: absolute;
             margin-right: 0;
-            top: 3rem;
+            top: 4rem;
             right: 5%;
         }
         &-num {
-            font-size: 2vw;
             display: flex;
             align-items: center;
             height: 104px;
             vertical-align: middle;
+            text-decoration: none; 
+            color: #181818;
             @include tab {
-                font-size: 3vw;
-            }
-            @include sp {
                 height: 140px;
                 font-size: 2.4rem;
             }
         }
         &-tel {
-            vertical-align: top;
+            margin-top: -1.2rem;
             font-size: 1.8rem;
         }
     }
 }
 
 .humburger {
-    position: absolute;
+    position: fixed;
     z-index: 3;
-    width: 5rem;
+    width: 5.5rem;
     height: 104px;
     margin-left: 2.2rem;
     cursor: pointer;
@@ -257,19 +235,19 @@ body {
         position: absolute;
         display: inline-block;
         background-color: black;
-        height: 1px;
+        height: 2px;
         transition: transform 0.6s ease;
     }
     span:nth-of-type(1) {
         top: 30%;
-        width: 4.5rem;
+        width: 5.5rem;
         @include sp {
             width: 3rem;
         }
     }
     span:nth-of-type(2) {
         top: 45%;
-        width: 4.5rem;
+        width: 5.5rem;
         @include sp {
             top: 40%;
             width: 3rem;
@@ -277,7 +255,7 @@ body {
     }
     span:nth-of-type(3) {
         top: 60%;
-        width: 4.5rem;
+        width: 5.5rem;
         @include sp {
             top: 50%;
             width: 3rem;
@@ -285,7 +263,7 @@ body {
     }
 
     &.active span:nth-of-type(1) {
-        transform: rotate(45deg) translate(25px, 5px);
+        transform: rotate(45deg) translate(24px, 5px);
         @include sp {
             transform: rotate(45deg) translate(15px, 5px);
         }
@@ -296,7 +274,7 @@ body {
     }
 
     &.active span:nth-of-type(3) {
-        transform: rotate(-45deg) translate(15px, 0px);
+        transform: rotate(-45deg) translate(16px, 0px);
         @include sp {
             transform: rotate(-45deg) translate(10px, 0px);
         }
@@ -305,21 +283,37 @@ body {
         background-color: #fdfdfd;
         position: fixed;
         top: 0;
-        width: 40%;
-        height: 62.2rem;
+        width: 35%;
+        height: 60.2rem;
         transform: translateX(-100%);
         overflow-x: hidden;
         transition: 0.5s;
         z-index: 2;
-        @include sp {
-            height: 39rem;
+        @include tab {
+            height: 40.2rem;
+            width: 33rem;
         }
         &.active {
             display: block;
             transform: translateX(calc(0% - 1px));
+            transition: 0.5s;
         }
         &-items {
-            border: 1px solid #000000;
+            border: 1px solid #181818;
+        }
+        &-ttl{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10rem;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid #181818;
+            font-size: 3.2rem;
+            font-family: dnp-shuei-nshogomincho-std, sans-serif;
+            @include tab{
+                font-size: 1.8rem;
+                height: 8.8remrem;
+            }
         }
         &-list {
             display: flex;
@@ -327,21 +321,44 @@ body {
             justify-content: center;
             height: 10rem;
             padding: 1.2rem 0;
-            border-bottom: 1px solid #000000;
-            font-size: 1.8rem;
+            border-bottom: 1px solid #181818;
+            font-size: 2.4rem;
             font-family: dnp-shuei-nshogomincho-std, sans-serif;
-            @include sp {
+            position: relative; 
+            color: black;
+            text-decoration: none; 
+            list-style: none;
+        
+            &:before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: -100%;
+              width: 100%;
+              height: 100%;
+              background-color: black;
+              color: #FDFDFD;
+              transition: left 0.5s ease;
+
+            }
+        
+            &:hover::before {
+              left: 0;
+              color: #FDFDFD;
+            }
+            li {
+                position: relative; 
+                transition: color 0.5s ease;
+              }
+          
+              &:hover li {
+                color: white; /* ホバー時の文字色 */
+              }
+
+          
+            @include tab {
                 height: 6rem;
-            }
-            a {
-                text-decoration: none; /* 下線を消す */
-                color: inherit;
-            }
-            &:nth-child(1) {
-                height: 12rem;
-                @include sp {
-                    height: 8.8rem;
-                }
+                font-size: 1.8rem;
             }
             &:nth-child(6) {
                 border-bottom: none;
@@ -363,38 +380,48 @@ body {
         height: 100%;
         width: 100%;
         display: block;
+        object-fit: cover;
     }
 
     &_left {
         margin-bottom: 2rem;
         @include sp {
             padding-right: 2rem;
+            margin-bottom: 1rem;
         }
     }
     &_right {
         display: grid;
         grid-template-rows: 1fr 1fr;
         gap: 2rem;
-        border-left: 1px solid #000000;
+        border-left: 1px solid #181818;
+        @include sp{
+            grid-template-rows: 25fr 28fr; 
+            gap: 1rem;
+        }
         &-up {
             padding-right: 2rem;
             @include sp {
-                border-top: 1px solid #000000;
+                border-top: 1px solid #181818;
                 padding-right: 0;
-                padding-left: 2rem;
+                padding-left: 4rem;
             }
         }
         &-down {
             padding-right: 2rem;
             padding-bottom: 2rem;
-            border-top: 1px solid #000000;
+            border-top: 1px solid #181818;
+            @include sp {
+                padding-right: 1rem;
+                padding-bottom: 1rem;
+            }
         }
     }
 }
 
 //----- about -----
 .about {
-    border: 1px solid #000000;
+    border: 1px solid #181818;
     width: 100%;
     background-image: url("/image/about.png");
     background-size: cover;
@@ -407,26 +434,71 @@ body {
 }
 
 //----- works -----
-.works {
-    &_content {
-        border-top: 1px solid #000000;
-        border-bottom: 1px solid #000000;
-        display: flex;
-        overflow-x: auto; /* 横スクロールを有効にする */
-        overflow-y: hidden; /* 縦方向のはみ出し部分を隠す */
-        white-space: nowrap; /* 改行を防ぐ */
-        -webkit-overflow-scrolling: touch;
-        &-img {
-            flex: 0 0 auto; /* 子要素をその内容に基づいてサイズ変更し、縮小させない */
-            margin-right: 10px;
-        }
-    }
+.works{
+    --scroll-gap: 30px;
 }
+@keyframes infiniteScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50% - var(--scroll-gap) / 2));
+    }
+  }
+  
+  .works_content {
+    &.scroll_wrap {
+      width: 100%;
+      overflow: hidden;
+    }
+  
+    .scroll_track {
+      width: max-content;
+      animation: infiniteScroll 25s linear infinite;
+    }
+  
+    .scroll_inner {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 0 var(--scroll-gap);
+    }
+  
+    .scroll_cont {
+      display: grid;
+      place-content: center;
+      flex-shrink: 0;
+      min-width: 30rem;
+      height: 35.5rem; 
+      overflow: hidden;
+  
+      &:nth-of-type(5n + 1) {
+        background-color: #3d82fa;
+      }
+      &:nth-of-type(5n + 2) {
+        background-color: #fa563c;
+      }
+      &:nth-of-type(5n + 3) {
+        background-color: #c4fa3c;
+      }
+      &:nth-of-type(5n + 4) {
+        background-color: #574975;
+      }
+      &:nth-of-type(5n + 5) {
+        background-color: #f5d444;
+      }
+  
+      .works_content-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
 
 // ----- flow -----
 .flow {
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
+    border-top: 1px solid #181818;
+    border-bottom: 1px solid #181818;
     width: 100%;
     background-image: url("/image/flow.png");
     background-size: cover;
@@ -481,10 +553,13 @@ body {
             font-family: "Noto Sans JP", sans-serif;
             font-size: 2.4rem;
             font-weight: lighter;
+            @include tab{
+                font-size: 1.6rem;
+            }
         }
         &-form {
             display: inline-block;
-            margin-top: 10rem;
+            margin-top: 3rem;
             margin-bottom: 6.2rem;
             @include tab {
                 margin-bottom: 1.9rem;
@@ -492,23 +567,34 @@ body {
         }
         &-email {
             cursor: pointer;
-            &:hover .contact_content-allow {
-                transform: rotate(-45deg) translate(25%, -10%); // ホバー時に右上にずらす
-            }
+            &:hover{
+                color: #00552e;
+              }
+              &:hover .contact_content-allow {
+                  transform: rotate(-45deg) translate(25%, -10%); 
+                  color: #181818;
+              }
         }
         &-insta {
             cursor: pointer;
+            transition: transform 0.6s ease, color 0.6s ease; 
+            &:hover{
+              color: #00552e;
+            }
             &:hover .contact_content-allow {
-                transform: rotate(-45deg) translate(25%, -10%); // ホバー時に右上にずらす
+                transform: rotate(-45deg) translate(25%, -10%); 
+                color: #181818;
             }
         }
         &-allow {
             position: absolute;
             font-size: 4.2rem;
             transform: rotate(-45deg) translate(10%, -10%);
-            transition: transform 0.6s ease;
+            transition: transform 0.6s ease, color 0.6s ease;
             &:hover {
                 transform: rotate(-45deg) translate(25%, -10%);
+                color: #181818;
+
             }
         }
     }

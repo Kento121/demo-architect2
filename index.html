@@ -28,37 +28,46 @@
             </div>
             <div class="humburger_menu">
                 <ul class="humburger_menu-items">
-                    <li class="humburger_menu-list">MENU</li>
-                    <!-- MEMO aタグでliタグを囲む -->
-                    <li class="humburger_menu-list">
-                        <a href="#about">ABOUT</a>
-                    </li>
-                    <li class="humburger_menu-list">
-                        <a href="#works">WORKS</a>
-                    </li>
-                    <li class="humburger_menu-list">
-                        <a href="#flow">FLOW</a>
-                    </li>
-                    <li class="humburger_menu-list">
-                        <a href="#contact">CONTACT US</a>
-                    </li>
-                    <li class="humburger_menu-list">
-                        <a href="#insta">INSTAGRAM</a>
-                    </li>
+                    <li class="humburger_menu-ttl">MENU</li>
+                    <a href="#about" class="humburger_menu-list">
+                        <li >
+                            ABOUT
+                        </li>
+                    </a>
+                    <a href="#works" class="humburger_menu-list">
+                        <li>
+                            WORKS
+                        </li>
+                    </a>
+                    <a href="#flow" class="humburger_menu-list">
+                        <li>
+                            FLOW
+                        </li>
+                    </a>
+                    <a href="#contact" class="humburger_menu-list">
+                        <li>
+                            CONTACT US
+                        </li>
+                    </a>
+                    <a href="#insta" class="humburger_menu-list">
+                        <li>
+                            INSTAGRAM
+                        </li>
+                    </a>
                 </ul>
             </div>
             <div class="header_center">
-                <img
+                <a href="#top"  class="header_center-title">
+                    <img
                     src="image/title.svg"
                     alt="title"
-                    class="header_center-title"
-                />
+                    />
+                </a>
             </div>
             <div class="header_right">
-                <!-- MEMO: リンクになるところはaタグで -->
-                <p class="header_right-num">
+                <a href="#" class="header_right-num">
                     <span class="header_right-tel">TEL</span> 123-456-7890
-                </p>
+                </a>
             </div>
         </header>
 
@@ -84,7 +93,7 @@
                         ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。
                     </p>
                     <div class="comp-flex">
-                        <p class="comp-more">READ MORE</p>
+                        <p class="comp-more">READ MORE <span class="comp-more-allow">→</span></p>
                     </div>
                 </div>
             </section>
@@ -97,35 +106,45 @@
                         ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。
                     </p>
                 </div>
-                <div class="works_content">
-                    <img
-                        src="image/works/works1.png"
-                        alt="works1"
-                        class="works_content-img"
-                    />
-                    <img
-                        src="image/works/works2.png"
-                        alt="works2"
-                        class="works_content-img"
-                    />
-                    <img
-                        src="image/works/works3.png"
-                        alt="works3"
-                        class="works_content-img"
-                    />
-                    <img
-                        src="image/works/works4.png"
-                        alt="works4"
-                        class="works_content-img"
-                    />
-                    <img
-                        src="image/works/works5.png"
-                        alt="works5"
-                        class="works_content-img"
-                    />
-                </div>
+                <div class="works_content scroll_wrap">
+                    <div class="scroll_track">
+                      <ul class="scroll_inner">
+                        <li class="scroll_cont">
+                          <img src="image/works/works1.png" alt="works1" class="works_content-img" />
+                        </li>
+                        <li class="scroll_cont">
+                          <img src="image/works/works2.png" alt="works2" class="works_content-img" />
+                        </li>
+                        <li class="scroll_cont">
+                          <img src="image/works/works3.png" alt="works3" class="works_content-img" />
+                        </li>
+                        <li class="scroll_cont">
+                          <img src="image/works/works4.png" alt="works4" class="works_content-img" />
+                        </li>
+                        <li class="scroll_cont">
+                          <img src="image/works/works5.png" alt="works5" class="works_content-img" />
+                        </li>
+                        <li class="scroll_cont">
+                          <img src="image/works/works1.png" alt="works1" class="works_content-img" />
+                        </li>
+                        <li class="scroll_cont">
+                          <img src="image/works/works2.png" alt="works2" class="works_content-img" />
+                        </li>
+                        <li class="scroll_cont">
+                          <img src="image/works/works3.png" alt="works3" class="works_content-img" />
+                        </li>
+                        <li class="scroll_cont">
+                          <img src="image/works/works4.png" alt="works4" class="works_content-img" />
+                        </li>
+                        <li class="scroll_cont">
+                          <img src="image/works/works5.png" alt="works5" class="works_content-img" />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  
                 <div class="comp-flex">
-                    <p class="comp_sentence-more">VIEW MORE</p>
+                    <p class="comp_sentence-more">VIEW MORE <span class="comp-sentence-more-allow">→</span></p>
                 </div>
             </section>
             <!-- flow -->
@@ -136,7 +155,7 @@
                         ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。
                     </p>
                     <div class="comp-flex">
-                        <p class="comp-more">LEARN MORE</p>
+                        <p class="comp-more">LEARN MORE <span class="comp-more-allow">→</span></p>
                     </div>
                 </div>
             </section>
