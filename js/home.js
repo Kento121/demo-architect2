@@ -48,3 +48,45 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+// worksスライド
+
+document.addEventListener('DOMContentLoaded', () => {
+  const gallery = document.querySelector("#gallery");
+  const scrollAmount = 1; 
+  const scrollInterval = 45; 
+  let isTouching = false; 
+
+  // クローンを作成して無限ループ
+  const clone = gallery.innerHTML;
+  gallery.innerHTML += clone;
+
+  // ギャラリーを自動でスクロールさせる
+  function autoScroll() {
+    if (!isTouching) { // スワイプ中でない場合にのみ自動スクロール
+      gallery.scrollLeft += scrollAmount;
+
+      // ギャラリーの端に達したらスクロールを最初の位置に戻す
+      if (gallery.scrollLeft >= gallery.scrollWidth / 2) {
+        gallery.scrollLeft = 0;
+      }
+    }
+  }
+
+  // タッチイベントを検知
+  gallery.addEventListener('touchstart', () => {
+    isTouching = true;
+  });
+
+  gallery.addEventListener('touchend', () => {
+    isTouching = false;
+
+    // スクロール位置をリセット
+    if (gallery.scrollLeft >= gallery.scrollWidth / 2) {
+      gallery.scrollLeft = gallery.scrollLeft % (gallery.scrollWidth / 2);
+    }
+  });
+
+  // 一定の間隔でautoScroll関数を呼び出す
+  setInterval(autoScroll, scrollInterval);
+});
