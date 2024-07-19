@@ -463,7 +463,7 @@ body {
 }
 
 .works {
-  --scroll-gap: 30px;
+  --scroll-gap: 3rem;
 }
 
 @keyframes infiniteScroll {
@@ -518,7 +518,7 @@ body {
 .slideshow ul {
   display: flex;
   list-style-type: none;
-  padding: 0;
+  padding-left: 3rem;
   margin: 0;
 }
 .slideshow ul li {

@@ -440,7 +440,7 @@ body {
 
 //----- works -----
 .works {
-    --scroll-gap: 30px;
+    --scroll-gap: 3rem;
   }
   
   @keyframes infiniteScroll {
@@ -468,7 +468,7 @@ body {
     border-top: 1px solid #181818;
     width: max-content;
     animation: infiniteScroll 38s linear infinite;
-    will-change: transform; // アニメーションのパフォーマンス向上
+    will-change: transform; 
   }
   
   .scroll_cont {
@@ -496,7 +496,7 @@ body {
     ul {
       display: flex;
       list-style-type: none;
-      padding: 0;
+        padding-left: 3rem;
       margin: 0;
   
       li {
