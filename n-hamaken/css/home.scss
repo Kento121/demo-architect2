@@ -1,0 +1,646 @@
+// ブレイクポイント
+$tab: 960px;
+@mixin tab {
+    @media screen and (max-width: $tab) {
+        @content;
+    }
+}
+$sp: 600px;
+@mixin sp {
+    @media screen and (max-width: $sp) {
+        @content;
+    }
+}
+
+// 共通
+html {
+    font-size: 62.5%;
+}
+body {
+    border: 1px solid #181818;
+    max-width: 1512px;
+    margin: 0 auto;
+}
+
+.comp {
+    &_ttl {
+        position: relative;
+        margin-top: 2rem;
+        margin-left: 10%;
+        font-family: "dnp-shuei-nshogomincho-std", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 5.2rem;
+        letter-spacing: 0.05em;
+        @include tab {
+            margin-left: 5%;
+            font-size: 3.2rem;
+        }
+    }
+    &_wrapper {
+        width: calc(100% - 10px);
+        margin: 5px auto;
+        border: 1px solid white;
+        box-sizing: border-box;
+        padding-bottom: 6rem;
+    }
+    &_content {
+        margin-left: 11%;
+        margin-bottom: 13.2rem;
+        width: 35%;
+        font-size: 1.6rem;
+        letter-spacing: 0.2rem;
+        font-weight: 300;
+        font-family: "Noto Sans JP", sans-serif;
+        line-height: 1.8;
+        @include tab {
+            left: 0;
+            margin: 0 auto;
+            margin-bottom: 18rem;
+            width: 90%;
+        }
+    }
+    &_sentence {
+        display: flex;
+        @include tab {
+            display: block;
+        }
+        &-content {
+            align-items: center;
+            width: 65%;
+            display: flex;
+            margin-left: 2%;
+            margin-right: 10%;
+            font-size: 1.6rem;
+            font-weight: 300;
+            font-family: "Noto Sans JP", sans-serif;
+            @include tab {
+                width: 90%;
+                margin: 1.8rem auto;
+            }
+        }
+        &-ttl {
+            position: relative;
+            margin-left: 10%;
+            font-family: "dnp-shuei-nshogomincho-std", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 5.2rem;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+            @include tab {
+                margin-left: 5%;
+                font-size: 3.2rem;
+            }
+        }
+        &-more {
+            font-size: 3.2rem;
+            font-family: "dnp-shuei-nshogomincho-std", sans-serif;
+            display: inline-block;
+            margin-right: 9%;
+            cursor: pointer;
+            transition: transform 0.6s ease, color 0.6s ease; 
+            &:hover{
+              color: #00552e;
+            }
+            &:hover .comp-more-allow {
+              transform:translate(25%, 0%);
+            }
+            &-allow {
+              position: absolute;
+              margin-left: 1rem;
+              transition: transform 0.6s ease, color 0.6s ease;
+              color: #181818; 
+              &:hover {
+                color: #181818;
+                transform:translate(25%, 0%);
+              }
+            }
+            @include sp {
+              font-size: 2.4rem;
+          }
+        }
+    }
+    &-flex {
+        text-align: right;
+    }
+    &-more {
+        font-size: 3.2rem;
+        font-family: "dnp-shuei-nshogomincho-std", sans-serif;
+        padding-right: 4rem;
+        display: inline-block;
+        margin-right: 9%;
+        cursor: pointer;
+        transition: transform 0.6s ease, color 0.6s ease; 
+        &:hover{
+          color: #00552e;
+        }
+        &:hover .comp-more-allow {
+          transform:translate(25%, 0%);
+        }
+        &-allow {
+          position: absolute;
+          margin-left: 1rem;
+          transition: transform 0.6s ease, color 0.6s ease;
+          color: #FDFDFD; 
+          &:hover {
+            color: #FDFDFD;
+            transform:translate(25%, 0%);
+          }
+      }
+      @include sp {
+        font-size: 2.4rem;
+    }
+    }
+}
+
+// header
+.header {
+    display: flex;
+    top: 0;
+    height: 104px;
+    // MEMO: box-sizingで対応できそう
+    width: calc(100% - 1px);
+    background-color: #FDFDFD;
+    justify-content: space-between;
+    border-bottom: 1px solid #181818;
+    z-index: 100;
+    @include tab {
+        height: 140px;
+    }
+    &_center {
+        &-title {
+            position: absolute;
+            top: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 32rem;
+            cursor: pointer;
+            img{
+                width: 100%;
+            }
+            @include tab {
+                top: 1rem;
+                right: 5%;
+                transform: translateX(0);
+                width: 24rem;
+            }
+            @include sp{
+                width: 20rem;
+            }
+        }
+    }
+    &_right {
+        position: relative;
+        height: 104px;
+        margin-right: 1.2rem;
+        font-family: dnp-shuei-nshogomincho-std, sans-serif;
+        font-size: 3.2rem;
+        font-weight: 600;
+        z-index: 1;
+        @include tab {
+            position: absolute;
+            margin-right: 0;
+            top: 4rem;
+            right: 5%;
+        }
+        
+        &-num {
+            display: flex;
+            align-items: center;
+            height: 104px;
+            vertical-align: middle;
+            text-decoration: none; 
+            color: #181818;
+            @include tab {
+                height: 140px;
+                font-size: 2.4rem;
+            }
+        }
+        &-tel {
+            margin-top: -0.6rem;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.humburger {
+    position: fixed;
+    z-index: 3;
+    width: 5.5rem;
+    height: 103px;
+    cursor: pointer;
+    background-color: rgba(253, 253, 253, 0.7); 
+    transition: background-color 2s ease; // 背景色のトランジションを設定
+    padding-right: 8rem;
+    padding-left: 2rem;
+    @include sp{
+    height: 80px;
+    padding-right: 6rem;
+    padding-left: 2rem;    
+    }
+    span {
+        position: absolute;
+        display: inline-block;
+        background-color: black;
+        height: 2px;
+        transition: transform 0.6s ease;
+    }
+    span:nth-of-type(1) {
+        top: 30%;
+        width: 5.5rem;
+        @include sp {
+            width: 3rem;
+        }
+    }
+    span:nth-of-type(2) {
+        top: 45%;
+        width: 5.5rem;
+        @include sp {
+            width: 3rem;
+        }
+    }
+    span:nth-of-type(3) {
+        top: 60%;
+        width: 5.5rem;
+        @include sp {
+            width: 3rem;
+        }
+    }
+
+    &.active span:nth-of-type(1) {
+        transform: rotate(45deg) translate(24px, 5px);
+        @include sp {
+            transform: rotate(45deg) translate(15px, 5px);
+        }
+    }
+
+    &.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    &.active span:nth-of-type(3) {
+        transform: rotate(-45deg) translate(16px, 0px);
+        @include sp {
+            transform: rotate(-45deg) translate(10px, 0px);
+        }
+    }
+    &_menu {
+        background-color: #fdfdfd;
+        position: fixed;
+        top: 0;
+        width: 35%;
+        height: 60.2rem;
+        transform: translateX(-100vw);
+        overflow-x: hidden;
+        transition: 0.5s;
+        z-index: 2;
+        @include tab {
+            height: 40.2rem;
+            width: 33rem;
+        }
+        &.active {
+            display: block;
+            transform: translateX(calc(0% - 1px));
+            transition: 0.5s;
+        }
+        &-items {
+            border: 1px solid #181818;
+        }
+        &-ttl{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10rem;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid #181818;
+            font-size: 3.2rem;
+            font-family: dnp-shuei-nshogomincho-std, sans-serif;
+            @include tab{
+                font-size: 1.8rem;
+                height: 8.8remrem;
+            }
+        }
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10rem;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid #181818;
+            font-size: 2.4rem;
+            font-family: dnp-shuei-nshogomincho-std, sans-serif;
+            position: relative; 
+            color: black;
+            text-decoration: none; 
+            list-style: none;
+            &:before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: -100%;
+              width: 100%;
+              height: 100%;
+              background-color: black;
+              color: #FDFDFD;
+              transition: left 0.5s ease;
+
+            }
+        
+            &:hover::before {
+              left: 0;
+              color: #FDFDFD;
+            }
+            li {
+                position: relative; 
+                transition: color 0.5s ease;
+              }
+          
+              &:hover li {
+                color: white; /* ホバー時の文字色 */
+              }
+
+          
+            @include tab {
+                height: 6rem;
+                font-size: 1.8rem;
+            }
+            &:nth-child(6) {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+//----- top-----
+.top {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: calc(66.67% - 1rem) calc(33.33% - 1rem);
+    @include sp {
+        display: block;
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    &_left {
+        margin-bottom: 2rem;
+        @include sp {
+            padding-right: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+    &_right {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+        border-left: 1px solid #181818;
+        @include sp{
+            grid-template-rows: 25fr 28fr; 
+            gap: 1rem;
+        }
+        &-up {
+            padding-right: 2rem;
+            @include sp {
+                border-top: 1px solid #181818;
+                padding-right: 0;
+                padding-left: 4rem;
+            }
+        }
+        &-down {
+            padding-right: 2rem;
+            padding-bottom: 2rem;
+            border-top: 1px solid #181818;
+            @include sp {
+                padding-right: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}
+
+//----- about -----
+.about {
+    border: 1px solid #181818;
+    width: 100%;
+    background-image: url("/image/about.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fdfdfd;
+    @include sp {
+        background-image: url("/image/about_sp.png");
+    }
+}
+
+//----- works -----
+.works {
+    --scroll-gap: 3rem;
+  }
+  
+  @keyframes infiniteScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50% - var(--scroll-gap) / 2));
+    }
+  }
+  
+  .works_content {
+    &.scroll_wrap {
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      position: relative;
+    }
+  }
+  
+  .scroll_inner {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0 var(--scroll-gap);
+    border-top: 1px solid #181818;
+    width: max-content;
+    animation: infiniteScroll 38s linear infinite;
+    will-change: transform; 
+  }
+  
+  .scroll_cont {
+    display: inline-block;
+    place-content: center;
+    min-width: 30rem;
+    height: 35.5rem;
+    overflow: hidden;
+    transition: opacity 0.5s ease;
+    &:hover {
+        opacity: 0.7;
+      }
+    .works_content-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  
+  .slideshow {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+  
+    ul {
+      display: flex;
+      list-style-type: none;
+        padding-left: 3rem;
+      margin: 0;
+  
+      li {
+        width: 20rem;
+        height: auto;
+        margin-right: 1rem;
+  
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  
+
+// ----- flow -----
+.flow {
+    border-top: 1px solid #181818;
+    border-bottom: 1px solid #181818;
+    width: 100%;
+    background-image: url("/image/flow.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fdfdfd;
+    font-family: dnp-shuei-nshogomincho-std, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+// ----- contact -----
+
+.contact {
+    &_content {
+        display: flex;
+        font-family: dnp-shuei-nshogomincho-std, sans-serif;
+        font-size: 3.2rem;
+        @include tab {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &-left {
+            width: 50%;
+            margin-left: 10%;
+            @include tab {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        &-right {
+            width: 50%;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+            margin-left: 3%;
+            margin-right: 8%;
+            border: none;
+            @include tab {
+                width: 90%;
+                margin: 0 auto;
+                height: 38rem;
+            }
+        }
+        &-tel {
+            margin-top: 4rem;
+        }
+        &-adressttl {
+            margin-top: 1.5rem;
+        }
+
+        &-adress {
+            font-family: "Noto Sans JP", sans-serif;
+            font-size: 2.4rem;
+            font-weight: lighter;
+            @include tab{
+                font-size: 1.6rem;
+            }
+        }
+        &-form {
+            display: inline-block;
+            margin-top: 3rem;
+            margin-bottom: 6.2rem;
+            @include tab {
+                margin-bottom: 1.9rem;
+            }
+        }
+        &-email {
+            cursor: pointer;
+            &:hover{
+                color: #00552e;
+              }
+              &:hover .contact_content-allow {
+                  transform: rotate(-45deg) translate(25%, -10%); 
+                  color: #181818;
+              }
+        }
+        &-insta {
+            cursor: pointer;
+            transition: transform 0.6s ease, color 0.6s ease; 
+            &:hover{
+              color: #00552e;
+            }
+            &:hover .contact_content-allow {
+                transform: rotate(-45deg) translate(25%, -10%); 
+                color: #181818;
+            }
+        }
+        &-allow {
+            position: absolute;
+            font-size: 4.2rem;
+            transform: rotate(-45deg) translate(10%, -10%);
+            transition: transform 0.6s ease, color 0.6s ease;
+            &:hover {
+                transform: rotate(-45deg) translate(25%, -10%);
+                color: #181818;
+
+            }
+        }
+    }
+    &_hr {
+        @include tab {
+            display: none;
+        }
+    }
+}
+
+// footer
+.footer {
+    &_logo {
+        display: block;
+        margin: 4.8rem auto;
+        @include tab {
+            width: 55%;
+            margin-top: 2rem;
+        }
+    }
+    &_copy {
+        margin-left: 3%;
+        font-family: dnp-shuei-nshogomincho-std, sans-serif;
+        font-size: 1.7rem;
+        @include tab {
+            margin: 0 auto;
+            margin-bottom: 6rem;
+            text-align: center;
+        }
+    }
+}
