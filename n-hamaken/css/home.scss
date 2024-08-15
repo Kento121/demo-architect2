@@ -642,8 +642,20 @@ body {
 // footer
 .footer {
     &_logo {
-        display: block;
         margin: 4.8rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        &-company{
+            margin-left: 1.2rem;
+            font-size: 5.2rem;
+            font-family: dnp-shuei-nshogomincho-std, sans-serif;
+            color: #181818; 
+        }
+        &-img{
+            width: 5%;
+        }
         @include tab {
             width: 55%;
             margin-top: 2rem;

@@ -667,8 +667,20 @@ body {
 }
 
 .footer_logo {
-  display: block;
   margin: 4.8rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.footer_logo-company {
+  margin-left: 1.2rem;
+  font-size: 5.2rem;
+  font-family: dnp-shuei-nshogomincho-std, sans-serif;
+  color: #181818;
+}
+.footer_logo-img {
+  width: 5%;
 }
 @media screen and (max-width: 960px) {
   .footer_logo {
